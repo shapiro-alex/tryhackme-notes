@@ -1,43 +1,26 @@
 # Linux Fundamentals Part 2
 
 ## Summary
-Permissions, switching users, common directories, SSH access, command flags, manual pages, and basic file operations.
-
-## Permissions
-- `ls -l` shows permissions of all files in a directory  
-- example: `ls -lh`
-
-## Switching Users
-- `su` - switch user  
-- starts a shell similar to user  
-- new session begins in home directory
-
-## Common Directories
-- `/etc` - one of the most important directories  
-- `/var` - variable data, frequently accessed or written by services and apps  
-- `/var/log` - log data not tied to a specific user  
-- `/root` - home for root user  
-- `/tmp` - temporary files, used once or twice  
+SSH access, flags and switches, help manuals, file operations, permissions, switching users, and common directories.
 
 ## SSH Access
-- SSH is Secure Shell  
+- SSH = Secure Shell  
 - encrypted protocol between devices  
-- data is encrypted during travel and decrypted on arrival  
-- login example:  
-  - `ssh user@ip`  
-  - `ssh tryhackme@10.201.47.65`
+- input is encrypted during travel and decrypted on the remote machine  
+- login format: `ssh user@ip`  
+- example: `ssh tryhackme@10.201.47.65`
 
 ## Flags and Switches
 - commands allow arguments  
 - identified by a hyphen and keyword  
-- example:  
-  - `ls` - list contents  
-  - `ls -a` - list all, including hidden  
+- examples:  
+  - `ls` - lists the current directory  
+  - `ls -a` - lists all files including hidden  
 
 ## Help and Manuals
-- `command --help` shows options and descriptions  
+- `command --help` - list options and descriptions  
 - `man` - manual command  
-- `man <command>` - fetch documentation  
+- `man <command>` - show documentation  
 - example: `man ls`
 
 ## File Operations
@@ -46,4 +29,20 @@ Permissions, switching users, common directories, SSH access, command flags, man
 - `cp` - copy  
 - `mv` - move  
 - `rm` - remove file  
-- `rm -r` - remove directory
+- `rm -r` - remove directory  
+
+## Permissions
+- `ls -l` - show file permissions  
+- example: `ls -lh`
+
+## Switching Users
+- `su` - switch user  
+- starts a shell similar to the user you switch to  
+- new session begins in home directory  
+
+## Common Directories
+- `/etc` - one of the most important system directories  
+- `/var` - variable data frequently accessed or written by services and applications  
+- `/var/log` - log data not tied to a specific user  
+- `/root` - home directory for the root user  
+- `/tmp` - temporary files used once or twice
