@@ -59,6 +59,7 @@
 - more efficient and solves IPv4 exhaustion
 
 ## MAC Addresses
+- MAC = Media Access Control
 - assigned to physical network interface at factory
 - 12-character hexadecimal number split into pairs with colons
 - first six characters: manufacturer
@@ -73,3 +74,25 @@
 - cafes and hotels often use MAC-based access control
 - can restrict or charge per device
 - spoofing can bypass restrictions
+
+---
+
+## Ping
+- ping is a fundamental network tool
+- uses ICMP packets to test connection performance
+- checks if a device is reachable and how reliable the connection is
+
+## ICMP
+- ICMP = Internet Control Message Protocol
+- ping uses ICMP echo request and ICMP echo reply
+- measures round-trip time between devices
+
+## Using Ping
+- works on Linux, Windows, and most OSs
+- syntax: `ping IP` or `ping website`
+- example from task: pinging `192.168.1.254`
+- results show packets sent, packets received, and average time (ms)
+
+## Practical
+- task: ping `8.8.8.8`
+- correct response reveals a flag
