@@ -1,4 +1,4 @@
-# Windows Fundamentals Part 1
+# Windows Fundamentals 1
 
 ## File System
 - Windows uses NTFS  
