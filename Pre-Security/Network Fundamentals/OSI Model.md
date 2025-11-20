@@ -10,13 +10,13 @@
 - helps different devices work together
 
 ## Layers (7 -> 1)
-7. Application
-6. Presentation
-5. Session
-4. Transport
-3. Network
-2. Data link
 1. Physical
+2. Data link
+3. Network
+4. Transport
+5. Session
+6. Presentation
+7. Application
 
 ## Key Concept
 - encapsulation = each layer adds its own info as data moves down the stack
