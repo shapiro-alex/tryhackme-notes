@@ -85,4 +85,94 @@ Content-Length: 98
 - sends data to update existing information  
 
 ### DELETE
-- removes information or records from the server  
+- removes information or records from the server
+
+---
+
+## HTTP Status Codes
+
+### Code Ranges
+- **100–199** → Info (rare today)
+- **200–299** → Success
+- **300–399** → Redirection
+- **400–499** → Client errors
+- **500–599** → Server errors
+
+---
+
+## Common Codes
+
+### 200 – OK  
+request succeeded
+
+### 201 – Created  
+resource created (new user, new post)
+
+### 301 – Moved Permanently  
+redirect to new location (permanent)
+
+### 302 – Found  
+temporary redirect
+
+### 400 – Bad Request  
+something wrong or missing in the request
+
+### 401 – Not Authorised  
+must log in first
+
+### 403 – Forbidden  
+logged in or not — still not allowed
+
+### 404 – Not Found  
+resource/page does not exist
+
+### 405 – Method Not Allowed  
+wrong method (e.g., GET instead of POST)
+
+### 500 – Internal Server Error  
+server crashed or misconfigured
+
+### 503 – Service Unavailable  
+server overloaded or under maintenance
+
+---
+
+## HTTP Headers
+
+### Request Headers (client → server)
+- **Host** — tells server which site you want (when many are hosted)
+- **User-Agent** — your browser + version (helps server format content)
+- **Content-Length** — size of data you're sending (e.g., form data)
+- **Accept-Encoding** — compression types your browser supports
+- **Cookie** — stored data sent with each request (session info, prefs)
+
+---
+
+### Response Headers (server → client)
+- **Set-Cookie** — server gives browser new cookie data to store
+- **Cache-Control** — how long the browser should cache the response
+- **Content-Type** - tells browser what type of file is returned (HTML, JS, image, etc.)
+- **Content-Encoding** — compression applied to the response (e.g., gzip)
+
+---
+
+# Cookies
+
+## What Are Cookies?
+- small pieces of data stored on your computer
+- saved when server sends **Set-Cookie** header
+- sent back to server on every future request
+- used because **HTTP is stateless**
+
+## What Cookies Are Used For
+- remembering who you are (authentication)
+- storing settings/preferences
+- tracking whether you've visited before
+- usually stored as **tokens**, not passwords
+
+## Basic Flow
+1. client requests webpage
+2. server responds, may include **Set-Cookie**
+3. browser stores cookie
+4. on every request, browser sends `Cookie:` header
+5. server uses cookie to identify the user/session
